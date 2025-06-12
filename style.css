@@ -1,0 +1,163 @@
+/* Tropical Mangonada Blog Styles */
+:root {
+  --mango-orange: #ff9f1c;
+  --chamoy-red: #e63946;
+  --lime-green: #2a9d8f;
+  --tajin-spice: #ff6b6b;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  background: linear-gradient(135deg, #fff5e6 0%, #ffe8d6 100%);
+  color: #2d3436;
+  line-height: 1.6;
+  margin: 0;
+  padding: 20px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Fredoka One", cursive;
+  color: var(--mango-orange);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 3.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  background: linear-gradient(45deg, var(--mango-orange), var(--chamoy-red));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.blog-post {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 800px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border: 3px solid var(--mango-orange);
+  position: relative;
+  overflow: hidden;
+}
+
+.blog-post::before {
+  content: "🍹";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 2rem;
+  opacity: 0.2;
+}
+
+.ingredients-list {
+  background: #fff8f0;
+  padding: 1.5rem;
+  border-radius: 15px;
+  border-left: 5px solid var(--tajin-spice);
+}
+
+.ingredients-list li {
+  margin: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.ingredients-list li::before {
+  content: "🥭";
+  position: absolute;
+  left: 0;
+}
+
+.recipe-steps {
+  counter-reset: step;
+  padding-left: 0;
+}
+
+.recipe-steps li {
+  list-style: none;
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.recipe-steps li::before {
+  counter-increment: step;
+  content: counter(step);
+  background: var(--mango-orange);
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+blockquote {
+  font-style: italic;
+  border-left: 4px solid var(--chamoy-red);
+  padding-left: 1rem;
+  margin: 2rem 0;
+  color: #666;
+}
+
+.mangonada-image {
+  max-width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  max-width: 300px;
+  text-align: center;
+}
+
+.mangonada-image:hover {
+  transform: scale(1.02);
+}
+
+/* Fun decorative elements */
+.tropical-decoration {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 2rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .blog-post {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+}
