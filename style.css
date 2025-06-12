@@ -32,27 +32,6 @@ h1 {
   -webkit-text-fill-color: transparent;
 }
 
-.blog-post {
-  background: white;
-  border-radius: 20px;
-  padding: 2rem;
-  margin: 2rem auto;
-  max-width: 800px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  border: 3px solid var(--mango-orange);
-  position: relative;
-  overflow: hidden;
-}
-
-.blog-post::before {
-  content: "🍹";
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 2rem;
-  opacity: 0.2;
-}
-
 .ingredients-list {
   background: #fff8f0;
   padding: 1.5rem;
@@ -125,27 +104,6 @@ blockquote {
   transform: scale(1.02);
 }
 
-/* Fun decorative elements */
-.tropical-decoration {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  font-size: 2rem;
-  animation: float 3s ease-in-out infinite;
-}
-
-@keyframes float {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-
 /* Responsive design */
 @media (max-width: 768px) {
   body {
@@ -154,10 +112,5 @@ blockquote {
 
   h1 {
     font-size: 2.5rem;
-  }
-
-  .blog-post {
-    padding: 1.5rem;
-    margin: 1rem;
   }
 }
